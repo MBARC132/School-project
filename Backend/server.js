@@ -5,9 +5,10 @@ import conn from './db/conn.js';
 import mysql from 'mysql2';
 import { SchoolRoutes } from "./routes/school.router.js";
 import path from "path";
+import dotenv from "dotenv";
 import { fileURLToPath } from "url";
-
-const PORT = 5000;
+dotenv.config();
+const PORT = process.env.PORT;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
