@@ -1,12 +1,34 @@
-# React + Vite
+#  School Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the School Management app built using **React + Vite**.  
+It allows users to add new schools and view existing schools with images.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
+- Add School form with validation (react-hook-form)
+- Display school list with images
+- API integration with backend (Express + MySQL)
+- Image upload support
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Dependencies
+- **react** – UI framework
+- **react-dom** – React rendering
+- **react-router-dom** – Routing
+- **react-hook-form** – Form handling
+- **axios** – HTTP requests
+- **dotenv** – Environment variables (Vite)
+
+---
+
+##  Setup
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/MBARC132/School-project/tree/main
+cd frontend
+- npm install
+- npm install react react-dom react-router-dom react-hook-form axios dotenv 
+- npm run dev
