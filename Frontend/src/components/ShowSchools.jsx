@@ -4,10 +4,11 @@ import axios from "axios";
 
 function ShowSchools() {
   const [schools, setSchools] = useState([]);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getschool")
+      .get(`${API_URL}/getschool`)
       .then((res) => setSchools(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -20,7 +21,7 @@ function ShowSchools() {
           <div key={school.id} className="school-card">
             {school.image && (
               <img
-                src={`http://localhost:5000${school.image}`}
+                src={`${API_URL}${school.image}`}
                 alt={school.name}
               />
             )}

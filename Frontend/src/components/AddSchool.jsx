@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./AddSchool.css";
-
 function AddSchool() {
   const {
     register,
@@ -23,7 +22,7 @@ function AddSchool() {
   const onSubmit = async (data) => {
     const formData = new FormData();
 
-    // append all form fields
+
     for (let key in data) {
       if (key === "image" && data.image.length > 0) {
         formData.append("image", data.image[0]); // file
@@ -32,7 +31,9 @@ function AddSchool() {
       }
     }
 
-    const res = await fetch("http://localhost:5000/schools", {
+    const API_URL = import.meta.env.VITE_API_URL;
+
+    const res = await fetch(`${API_URL}/schools`, {
       method: "POST",
       body: formData,
     });
